@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/nightsky"
+    tools:context=".InfoActivity">
+
+    <!-- Title and Image Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/constellationName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D1C4E9"
+            android:textColor="#673AB7"
+            android:fontFamily="@font/californian_fb"
+            android:text="Constellation Name"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:padding="8dp" />
+
+        <!-- Image -->
+        <ImageView
+            android:id="@+id/constellationImageHolder"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Image of the constellation"
+            android:scaleType="fitCenter"
+            android:background="#808080"/>
+    </LinearLayout>
+
+    <!-- Scroll View for Stats -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp">
+
+
+        <LinearLayout
+            android:id="@+id/stats_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Favorite Button -->
+    <Button
+        android:id="@+id/favoriteButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="#673AB7"
+        android:text="Favorite"
+        android:textColor="#FFFFFF"
+        android:padding="12dp" />
+</LinearLayout>
